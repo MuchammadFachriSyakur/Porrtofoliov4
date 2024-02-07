@@ -1,0 +1,694 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Raleway&display=swap');
+@font-face{
+  font-family: 'Raleway-bold';
+  src: url('source/static/Raleway-Bold.ttf');
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body{
+  overflow-x: hidden;
+}
+.fullcontainer{
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fullcontainer .navbar{
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #1D1D1D;
+  display: grid;
+  grid-template-columns: 20% 45% 35%;
+  grid-template-rows: 75px;
+  grid-auto-columns: 100%;
+  grid-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 25px;
+  position: static;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.fullcontainer .navbar .toggle{
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  order: 1;
+  position: relative;
+  top: 10px;
+  left: 50%;
+  right: 50%;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+.fullcontainer .navbar .toggle i{
+  font-size: 50px;
+  color: white;
+}
+.fullcontainer .navbar .logo{
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: red;
+  order: 2;
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+.fullcontainer .navbar .contact{
+  box-sizing: border-box;
+  max-width: 90px;
+  order: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 5px;
+  background-color: #00ff23;
+  position: relative;
+  top: 10px;
+  right: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: black;
+  border-radius: 3px;
+  font-family: 'Inter', sans-serif;
+}
+.fullcontainer .navbar .contact:hover{
+  background-color: #00af18;
+}
+.fullcontainer .navbar .navlink{
+  box-sizing: border-box;
+  width: 100%;
+  height: 200px;
+  list-style-type: none;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  order: 4;
+  grid-column: 1/4;
+  gap: 15px;
+}
+.fullcontainer .navbar .navlink.aktif{
+  display: flex;
+}
+.fullcontainer .navbar .navlink li a{
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 20px;
+  color: white ;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+}
+.container{
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .home{
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+}
+.container .home img{
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  transform: translateX(50px);
+  opacity: 0;
+  transition: all .8s ease-in-out;
+}
+.container .home img.aktif{
+  transform: translateX(0);
+  opacity: 1;
+}
+.container .home .grid1{
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
+}
+.container .home .grid1 .medium{
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-family: 'Raleway-bold';
+  transform: translateX(-50px);
+  opacity: 0;
+  transition: all .8s ease-in-out;
+}
+.container .home .grid1 .medium.aktif{
+  transform: translateX(0);
+  opacity: 1;
+}
+.container .home .grid1 .medium span{
+  color: rgb(0,0,0,0.5);
+}
+.container .home .grid1 .title{
+  font-size: 50px;
+  font-weight: bolder;
+  font-family: 'Raleway', sans-serif;
+  transform: translateX(-60px);
+  opacity: 0;
+  transition: all .8s ease-in-out;
+}
+.container .home .grid1 .title.aktif{
+  transform: translateX(0);
+  opacity: 1;
+}
+.container .home .grid1 .description{
+  font-size: 20px;
+  color: rgb(0,0,0,0.5);
+  font-family: 'Raleway', sans-serif;
+  transform: translateX(-70px);
+  opacity: 0;
+  transition: all .8s ease-in-out;
+}
+.container .home .grid1 .description.aktif{
+  transform: translateX(0);
+  opacity: 1;
+}
+.container .home .grid1 .cv{
+  padding: 10px;
+  background-color: #00ff23;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 5px;
+  color: black;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: 'Raleway', sans-serif;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 black;
+  cursor: pointer;
+}
+.container .home .grid1 .cv:hover{
+  background-color: #00af18;
+}
+.container .projects{
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 10px;
+}
+.container .projects .title{
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.container .projects .title .text{
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: capitalize;
+  transform: translateX(-50px);
+  opacity: 0;
+  transition: all .8s ease-in-out;
+}
+.container .projects .title .text.aktif{
+  transform: translateX(0);
+  opacity: 1;
+}
+.container .projects .title .line{
+  box-sizing: border-box;
+  width: 90%;
+  height: 3px;
+  background-color: black;
+  border-radius: 5px;
+  transform: translateX(50px);
+  opacity: 0;
+  transition: all .8s ease-in-out;
+}
+.container .projects .title .line.aktif{
+  transform: translateX(0);
+  opacity: 1;
+}
+.container .projects .title .line::before{
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: black;
+  position: relative;
+  top: 50%;
+  bottom: 50%;
+  left: 99%;
+  right: 1%;
+  margin-top: -5px;
+}
+.container .projects .wrap_projects{
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.container .projects .wrap_projects .card_projects{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-areas: 
+    "Picture Picture"
+    "Title Title"
+    "description description"
+    "Btn_view Btn_repo"
+  ;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(150px);
+  opacity: 0;
+  transition: all 1.3s ease-in-out;
+}
+.container .projects .wrap_projects .card_projects:nth-child(even){
+  transform: translateX(-150px);
+  opacity: 0;
+}
+.container .projects .wrap_projects .card_projects.aktif{
+  transform: translateX(0);
+  opacity: 1;
+}
+.container .projects .wrap_projects .card_projects .Picture_projects{
+  box-sizing: border-box;
+  grid-area: Picture;
+  width: 100%;
+  height: 226px;
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  object-fit: cover;
+}
+.container .projects .wrap_projects .card_projects .name_projects{
+  font-size: 36px;
+  font-weight: bolder;
+  grid-area: Title;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+.container .projects .wrap_projects .card_projects .description{
+  grid-area: description;
+  margin-bottom: 5px;
+  font-size: 15px;
+  font-weight: 400;
+}
+.container .projects .wrap_projects .card_projects .view{
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 95px;
+  height: 35px;
+  grid-area: Btn_view;
+  background-color: black;
+  margin: 0 100% 0 0%;
+}
+.container .projects .wrap_projects .card_projects .view a{
+  font-size: 15px;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+}
+.container .projects .wrap_projects .card_projects .repo_github{
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 95px;
+  height: 35px;
+  grid-area: Btn_repo;
+  font-size: 15px;
+  font-weight: 400;
+  color: white;
+  background-color: black;
+  margin: 0 100% 0 0%;
+}
+.container .projects .wrap_projects .card_projects .repo_github a{
+  font-size: 15px;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+}
+.container .skills{
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 36px 15px 32px 15px;
+  gap: 10px;
+}
+.container .skills .title{
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.container .skills .title .text{
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: capitalize;
+  transform: translateX(-50px);
+  opacity: 0;
+  transition: all .8s ease-in-out;
+}
+.container .skills .title .text.aktif{
+  transform: translateX(0);
+  opacity: 1;
+}
+.container .skills .title .line{
+  box-sizing: border-box;
+  width: 90%;
+  height: 3px;
+  background-color: black;
+  border-radius: 5px;
+  transform: translateX(50px);
+  opacity: 0;
+  transition: all .8s ease-in-out;
+}
+.container .skills .title .line.aktif{
+  transform: translateX(0);
+  opacity: 1;
+}
+.container .skills .title .line::before{
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: black;
+  position: relative;
+  top: 50%;
+  bottom: 50%;
+  left: 99%;
+  right: 1%;
+  margin-top: -5px;
+}
+.container .skills .wrap_skils{
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.container .skills .wrap_skils .card_skils{
+  box-sizing: border-box;
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  transform: translateY(100px);
+  transition: all .8s ease-in-out;
+}
+.container .skills .wrap_skils .card_skils.aktif{
+  transform: translateY(0);
+  opacity: 1;
+}
+.container .contact{
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 36px 15px 32px 15px;
+  gap: 10px;
+}
+.container .contact .title{
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.container .contact .title .text{
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: capitalize;
+  transform: translateX(-50px);
+  opacity: 0;
+  transition: all .8s ease-in-out;
+}
+.container .contact .title .text.aktif{
+  transform: translateX(0);
+  opacity: 1;
+}
+.container .contact .title .line{
+  box-sizing: border-box;
+  width: 90%;
+  height: 3px;
+  background-color: black;
+  border-radius: 5px;
+  transform: translateX(50px);
+  opacity: 0;
+  transition: all .8s ease-in-out;
+}
+.container .contact .title .line.aktif{
+  transform: translateX(0);
+  opacity: 1;
+}
+.container .contact .title .line::before{
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: black;
+  position: relative;
+  top: 50%;
+  bottom: 50%;
+  left: 99%;
+  right: 1%;
+  margin-top: -5px;
+}
+.container .contact form{
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .contact form .sama{
+  box-sizing: border-box;
+  width: 100%;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 4px;
+}
+.container .contact form .beda{
+  box-sizing: border-box;
+  width: 100%;
+  display: flex; 
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding: 4px;
+}
+.container .contact form .beda button{
+  box-sizing: border-box;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #64748b;
+  font-size: 15px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+.container .contact form .beda button:hover{
+  opacity: 0.9;
+}
+.container .contact form .sama input{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 8px;
+  margin-top: 10px;
+  border: 1px solid #cbd5e1;
+  outline: none;
+  border-radius: 5px;
+}
+.container .contact form .sama p{
+  font-size: 18px;
+  font-weight: 600;
+}
+.container .contact form .sama input:hover{
+  border: 1px solid #14b8a6;
+}
+.container .footer{
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: #002c00;
+  color: white;
+  padding: 20px 0;
+}
+.container .footer .title{
+  font-size: 36px;
+  font-weight: 600;
+  text-transform: capitalize;
+  width: 100%;
+  max-width: 1000px;
+  padding: 5px 10px;
+}
+.container .footer .description{
+  font-size: 20px;
+  font-weight: 400;
+  width: 100%;
+  max-width: 1000px;
+  padding: 5px 10px;
+}
+.container .footer .line{
+  width: 95%;
+  height: 3px;
+  max-width: 1000px;
+  background-color: white;
+  margin: 10px 0;
+}
+.container .footer .button{
+  width: 100%;
+  max-width: 1000px;
+  padding: 5px 10px;
+}
+.container .footer .button .start_email{
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 95px;
+  height: 35px;
+  font-size: 15px;
+  font-weight: 400;
+  color: white;
+  background-color: black;
+}
+@media(min-width: 768px){
+  .fullcontainer .navbar{
+    box-sizing: border-box;
+    width: 90%;
+    grid-template-columns: 20% 60% 20%;
+    padding-bottom: 20px;
+  }
+  .fullcontainer .navbar .logo{
+    order: 1;
+    margin-left: 15px;
+    position: relative;
+    left: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .fullcontainer .navbar .navlink{
+    display: flex;
+    order: 2;
+    grid-column: auto;
+    width: 100%;
+    flex-direction: row;
+  }
+  .fullcontainer .navbar .contact{
+    order: 3;
+  }
+  .container .home img{
+    order: 2;
+  }
+  .container .home .grid1{
+    order: 1;
+  }
+  .container .projects .wrap_projects .card_projects{
+    grid-template-columns: 15% 15% 15% 55%;
+    grid-template-areas: 
+     "Title Title Title Picture"
+     "description description description Picture"
+     "Btn_view Btn_repo Btn_repo Picture"
+    ;
+    justify-content: center;
+    align-items: center;
+  }
+  .container .projects .wrap_projects .card_projects .name_projects{
+    grid-area: Title;
+  }
+  .container .projects .wrap_projects .card_projects .Picture_projects{
+    grid-area: Picture;
+    width: 393px;
+    height: 226px;
+    margin: 0 auto;
+  }
+  .container .projects .wrap_projects .card_projects .description{
+    grid-area: description;
+  }
+  .container .projects .wrap_projects .card_projects .view{
+    grid-area: Btn_view;
+    margin: 0 95% 0 5%;
+  }
+  .container .projects .wrap_projects .card_projects .repo_github{
+    grid-area: Btn_repo;
+    margin: 0 95% 0 5%;
+  }
+}
+@media(max-width: 768px){
+  .fullcontainer .navbar .toggle{
+    display: flex;
+  }
+}
